@@ -1,0 +1,21 @@
+{
+  "name": "reps-mentor-overview",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.1.5",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "dom-storage": "^2.0.2",
+    "express": "~4.14.0",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.4",
+    "morgan": "~1.7.0",
+    "node-fetch": "^1.6.3",
+    "serve-favicon": "~2.3.0"
+  }
+}

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .container
+    h1= title
+    
+    - each mentor in reps
+      - if (mentor.mentor)
+        h2= mentor.mentor.first_name + ' ' + mentor.mentor.last_name
+        h3= 'Number of Mentees: ' + mentor.mentees.length
+    
+      table.mentor
+        theader
+          th Name
+          th Country
+        tbody
+          - each rep in mentor.mentees
+            tr
+              td
+                a(href=rep.profile.remo_url)
+                  = rep.first_name + ' ' + rep.last_name
+              td= rep.profile.country
