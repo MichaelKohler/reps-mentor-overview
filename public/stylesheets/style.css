@@ -49,12 +49,27 @@ th {
 
 table.mentor th:first-child,
 table.mentor td:first-child {
-  width: 50%;
+  width: 30%;
 }
 
 table.mentor th:nth-child(2),
 table.mentor td:nth-child(2) {
-  width: 50%;
+  width: 10%;
+}
+
+table.mentor th:nth-child(3),
+table.mentor td:nth-child(3) {
+  width: 20%;
+}
+
+table.mentor th:nth-child(4),
+table.mentor td:nth-child(4) {
+  width: 20%;
+}
+
+table.mentor th:nth-child(5),
+table.mentor td:nth-child(5) {
+  width: 20%;
 }
 
 a {
