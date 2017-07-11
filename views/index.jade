@@ -9,22 +9,23 @@ block content
         h2= mentor.mentor.first_name + ' ' + mentor.mentor.last_name
         h3= 'Number of Mentees: ' + mentor.mentees.length
     
-      table.mentor
-        theader
-          th Name
-          th Country
-          th Prev. Mentor
-          th Date joined
-          th Groups
-        tbody
-          - each rep in mentor.mentees
-            tr
-              td
-                a(href=rep.profile.remo_url)
-                  = rep.first_name + ' ' + rep.last_name
-              td= rep.profile.country
-              td
-                if rep.profile.mentor && rep.profile.mentor.display_name != mentor.mentor.display_name
-                  span= rep.profile.mentor.display_name
-              td= rep.profile.date_joined_program
-              td= rep.profile.groups.map((group) => group.name).join(', ')
+      - if (mentor.mentees.length > 0)
+        table.mentor
+          theader
+            th Name
+            th Country
+            th Prev. Mentor
+            th Date joined
+            th Groups
+          tbody
+            - each rep in mentor.mentees
+              tr
+                td
+                  a(href=rep.profile.remo_url)
+                    = rep.first_name + ' ' + rep.last_name
+                td= rep.profile.country
+                td
+                  if rep.profile.mentor && rep.profile.mentor.display_name != mentor.mentor.display_name
+                    span= rep.profile.mentor.display_name
+                td= rep.profile.date_joined_program
+                td= rep.profile.groups.map((group) => group.name).join(', ')
