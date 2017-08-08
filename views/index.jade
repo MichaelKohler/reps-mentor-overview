@@ -3,12 +3,12 @@ extends layout
 block content
   .container
     h1= title
-    
+
     - each mentor in reps
       - if (mentor.mentor)
         h2= mentor.mentor.first_name + ' ' + mentor.mentor.last_name
         h3= 'Number of Mentees: ' + mentor.mentees.length
-    
+
       - if (mentor.mentees.length > 0)
         table.mentor
           theader
@@ -21,11 +21,11 @@ block content
             - each rep in mentor.mentees
               tr
                 td
-                  a(href=rep.profile.remo_url)
+                  a(href=rep.remo_url)
                     = rep.first_name + ' ' + rep.last_name
-                td= rep.profile.country
+                td= rep.country
                 td
-                  if rep.profile.mentor && rep.profile.mentor.display_name != mentor.mentor.display_name
-                    span= rep.profile.mentor.display_name
-                td= rep.profile.date_joined_program
-                td= rep.profile.groups.map((group) => group.name).join(', ')
+                  if rep.mentor && rep.mentor.display_name != mentor.mentor.display_name
+                    span= rep.mentor.display_name
+                td= rep.date_joined_program
+                td= rep.groups.map((group) => group.name).join(', ')
