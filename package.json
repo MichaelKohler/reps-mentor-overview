@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "DEBUG=* node ./bin/www"
+    "start": "DEBUG=* node ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "async": "^2.5.0",
@@ -16,6 +18,8 @@
     "lodash": "^4.17.4",
     "morgan": "^1.8.2",
     "node-fetch": "^1.7.2",
-    "serve-favicon": "^2.4.3"
-  }
+    "serve-favicon": "^2.4.3",
+    "snyk": "^1.42.5"
+  },
+  "snyk": true
 }
