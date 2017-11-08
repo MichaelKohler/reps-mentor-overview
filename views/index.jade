@@ -28,4 +28,4 @@ block content
                   if rep.mentor && rep.mentor.display_name != mentor.mentor.display_name
                     span= rep.mentor.display_name
                 td= rep.date_joined_program
-                td= rep.groups.map((group) => group.name).join(', ')
+                td= rep.profile.groups.map((group) => group.name).join(', ')
