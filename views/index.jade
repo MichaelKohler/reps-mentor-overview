@@ -23,9 +23,9 @@ block content
                 td
                   a(href=rep.remo_url)
                     = rep.first_name + ' ' + rep.last_name
-                td= rep.country
+                td= rep.profile.country
                 td
-                  if rep.mentor && rep.mentor.display_name != mentor.mentor.display_name
-                    span= rep.mentor.display_name
-                td= rep.date_joined_program
+                  if rep.profile.mentor && rep.profile.mentor.display_name != mentor.mentor.display_name
+                    span= rep.profile.mentor.display_name
+                td= rep.profile.date_joined_program
                 td= rep.profile.groups.map((group) => group.name).join(', ')
