@@ -21,7 +21,7 @@ block content
             - each rep in mentor.mentees
               tr
                 td
-                  a(href=rep.remo_url)
+                  a(href="#{rep.profile.remo_url}")
                     = rep.first_name + ' ' + rep.last_name
                 td= rep.profile.country
                 td
